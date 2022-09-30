@@ -6,7 +6,7 @@
       <paths name="webte1-server">
         <serverdata>
           <mappings>
-            <mapping deploy="/maska" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/skryte1" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
