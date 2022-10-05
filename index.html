@@ -11,23 +11,23 @@
     <h1>Zadanie 1 Webové Technológie 1</h1>
 </header>
 
-<nav class="vert">
+<nav class="hor">
     <ul>
-        <li><a href="web/cv">Životopis</a></li>
-        <li><a href="web/moj_rozvrh">Rozvrh</a></li>
-        <li><a href="web/obrazok">Obrázok</a></li>
+        <li class="hor"><a href="web/cv">Životopis</a></li>
+        <li class="hor"><a href="web/moj_rozvrh">Rozvrh</a></li>
+        <li class="hor"><a href="web/obrazok">Obrázok</a></li>
     </ul>
 </nav>
 
 
 <section>
 
-    <div class="moja-foto">
-        <img src="web/jaa.jpg" alt=" ja" height="300" width="224">
+    <div>
+        <img class="moja-foto" src="web/jaa.jpg" alt="moja fotografia" height="500" width="375">
     </div>
 
-    <article>
-        <h2 class="nieco-o-mne">Niečo málo o mne</h2>
+    <article class="text">
+        <h2 class="nieco-o-mne">Niečo o mne</h2>
         <p> Volám sa Marián Kňazovický. Mám 21 rokov a
             študujem na Slovenskej Technickej Univerzite v Bratislave v odbore Aplikovaná informatika.
             Narodil som sa v Brezne. Celý život bývam v neďalekej obci
@@ -41,6 +41,15 @@
             basketbal
             či volejbal. V poslednom čase som sa počas voľného času začal venovať turistike. Predovšetkým mne najbližším
             Nízkym Tatrám.</p>
+
+
+        <aside class="citat">
+            <i class="citat">,,Všetci sú géniami. Ak budete rybu hodnotiť podľa jej schopnosti<br> vyliezť na strom, celý svoj
+                život prežije v domnienke, že je hlúpa.''
+            </i><br>
+            <i class="einstein">Albert Einstein
+            </i>
+        </aside>
 
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean et est a dui semper facilisis. Pellentesque
             placerat elit a nunc. Nullam tortor odio, rutrum quis, egestas ut, posuere sed, felis. Vestibulum placerat
@@ -59,37 +68,19 @@
             ipsum. Donec eget est.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean et est a dui semper
             facilisis. Pellentesque placerat elit a nunc. Nullam tortor odio, rutrum quis, egestas ut, posuere sed,
             felis. Vestibulum placerat feugiat nisl. Suspendisse lacinia, odio non feugiat vestibulum, sem erat blandit
-            metus, ac nonummy magna odio pharetra felis. Vivamus vehicula velit non metus faucibus auctor. Nam sed
-            augue. Donec orci. Cras eget diam et dolor dapibus sollicitudin. In lacinia, tellus vitae laoreet ultrices,
-            lectus ligula dictum dui, eget condimentum velit dui vitae ante. Nulla nonummy augue nec pede. Pellentesque
-            ut nulla. Donec at libero. Pellentesque at nisl ac nisi fermentum viverra. Praesent odio. Phasellus
-            tincidunt diam ut ipsum. Donec eget est.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean et
-            est a dui semper facilisis. Pellentesque placerat elit a nunc. Nullam tortor odio, rutrum quis, egestas ut,
-            posuere sed, felis. Vestibulum placerat feugiat nisl. Suspendisse lacinia, odio non feugiat vestibulum, sem
-            erat blandit metus, ac nonummy magna odio pharetra felis. Vivamus vehicula velit non metus faucibus auctor.
-            Nam sed augue. Donec orci. Cras eget diam et dolor dapibus sollicitudin. In lacinia, tellus vitae laoreet
-            ultrices, lectus ligula dictum dui, eget condimentum velit dui vitae ante. Nulla nonummy augue nec pede.
-            Pellentesque ut nulla. Donec at libero. Pellentesque at nisl ac nisi fermentum viverra. Praesent odio.
-            Phasellus tincidunt diam ut ipsum.</p>
+            metus, ac nonummy magna odio pharetra felis.</p>
 
 
     </article>
 
 
-    <aside class="citat">
-        <i class="citat">,,Všetci sú géniami. Ak budete rybu hodnotiť podľa jej schopnosti vyliezť na strom, celý svoj
-            život prežije v
-            domnienke, že je hlúpa.''
-        </i><br>
-        <i><b>Albert Einstein</b>
-        </i>
-    </aside>
+
 </section>
 <footer class="pata">
     <h3>
         Moje predmety tento semester:
     </h3>
-    <nav>
+
         <ul>
             <li class="predmety">Operačné systémy</li>
             <li class="predmety">Analýza a zložitosť algoritmov</li>
@@ -98,9 +89,11 @@
             <li class="predmety">Bakalársky projekt 1</li>
             <li class="predmety">Telesná kultúra 5</li>
         </ul>
-    </nav>
 
 </footer>
 
 </body>
 </html>
+
+<!--  Zvacsit pismo v citate, zaoblit rohy na fotke, zmenit menu na horizontalne a zoznam na vertikale + presunut ich
+ inam, vymyslit nieco co sa vlozi do patky, prelievacie pozadie -->

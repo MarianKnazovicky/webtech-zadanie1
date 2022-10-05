@@ -12,6 +12,7 @@ header.hlavny {
     text-align: center;
     grid-area: hlavny;
     margin-bottom: 10px;
+    border-radius: 20px;
 }
 
 nav.spat {
@@ -25,6 +26,7 @@ h1.zadanie1{
 body {
     font-family: Baloo, sans-serif;
     background-color: antiquewhite;
+    /*background: linear-gradient(antiquewhite  0%, papayawhip 100%);*/
 }
 
 ul {
@@ -72,6 +74,23 @@ tr:nth-of-type(even) {
     background-color: bisque;
 }
 
+a:link {
+    color: rebeccapurple;
+}
+
+a:visited {
+    color: mediumpurple;
+}
+
+a:hover {
+    color: mediumvioletred;
+}
+
+a:active {
+    color: red;
+}
+
+
 th, td {
     border: 1px solid black;
     text-align: center;
@@ -100,43 +119,74 @@ caption {
 
 /* O MNE */
 
-nav.vert {
+nav.hor {
     text-align: center;
+    margin-right: 3%;
+}
+
+li.hor{
+    display: inline;
+    margin-left: 1%;
+    margin-right: 1%;
+
 }
 
 h2.nieco-o-mne {
     background-color: bisque;
     padding-top: 1px;
     padding-bottom: 1px;
+    border-radius: 20px;
 }
 
-div.moja-foto {
+/*div.moja-foto {
     float: left;
     padding-left: 5px;
     padding-right: 15px;
+}*/
+
+img.moja-foto{
+    float: left;
+    margin-left: 0.2%;
+    margin-right: 1%;
+    border-radius: 20px;
 }
 
-article.o-mne {
-    float: right;
+article.text {
+
 }
+
+/*article.o-mne {
+    float: right;
+}*/
 
 aside.citat {
     float: right;
-    clear: right;
+    clear: left;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 i.citat {
     background: bisque;
+    font-size: 1.5rem;
+    border-radius: 20px;
+
+}
+
+i.einstein{
+    font-weight: bold;
+    margin-right: 1.8%;
 }
 
 footer.pata {
     clear: both;
     padding: 3px;
     background: bisque;
+    border-radius: 20px;
 }
 
 li.predmety {
-    display: inline;
     margin: 2px;
 }
 
@@ -147,6 +197,7 @@ body.zivotopis {
     grid-template-columns: 50% 50%;
     grid-template-areas:
             'hlavny hlavny'
+            'nadpis nadpis'
             'lavy pravy';
     grid-gap: 5px;
 }
@@ -163,11 +214,18 @@ div.lavy {
 
 div.pravy {
     grid-area: pravy;
-    background: darkkhaki;
+    background: burlywood;
     padding: 10px;
     margin-left: 0;
     margin-right: 45%;
     text-align: left;
+}
+
+h2.nadpis{
+    grid-area: nadpis;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
 /*OBRÁZOK*/
