@@ -4,7 +4,7 @@
 }
 
 /*GENERAL*/
-header.hlavny {
+header {
     background: bisque;
     margin-top: 0;
     padding-top: 1px;
@@ -15,14 +15,9 @@ header.hlavny {
     border-radius: 20px;
 }
 
-h1.zadanie1{
-    margin-right: 2%;
-}
-
 body {
     font-family: Baloo, sans-serif;
     background-color: antiquewhite;
-    /*background: linear-gradient(antiquewhite  0%, papayawhip 100%);*/
 }
 
 ul {
@@ -32,6 +27,38 @@ ul {
 li {
     padding-right: 1%;
     padding-left: 1%;
+}
+
+nav {
+    text-align: center;
+    margin-right: 3%;
+    font-size: 1.3rem;
+}
+
+nav li{
+    display: inline;
+    margin-left: 1%;
+    margin-right: 1%;
+    background: black;
+    border-radius: 20px;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.nadpis{
+    grid-area: nadpis;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    padding: 0.5%;
+    background: bisque;
+    border-radius: 20px;
+    grid-area: footer;
 }
 
 a:link {
@@ -50,14 +77,6 @@ a:active {
     color: red;
 }
 
-a.mailto:link{
-    color: black;
-}
-
-a.mailto:hover {
-    color: mediumvioletred;
-}
-
 a.mailto:visited{
     color: black;
 }
@@ -65,6 +84,41 @@ a.mailto:visited{
 a.mailto:active{
     color: red;
 }
+
+a.mailto:link{
+    color: black;
+}
+
+a.mailto:hover{
+    color: mediumvioletred;
+}
+
+a.link:link {
+    color: black;
+}
+
+a.link:visited {
+    color: black;
+}
+
+a.link:hover {
+    color: mediumvioletred;
+}
+
+a.link:active {
+    color: red;
+}
+
+img {
+    border-radius: 20px;
+}
+
+.socials{
+    float: right;
+    margin-right: 1%;
+    grid-area: social;
+}
+
 /* ROZVRH */
 table.rozvrh {
     border-collapse: collapse;
@@ -75,6 +129,7 @@ table.rozvrh {
     margin-right: auto;
     margin-top: auto;
     table-layout: fixed;
+    font-size: 1Vw;
 }
 
 table.legenda {
@@ -84,18 +139,21 @@ table.legenda {
     margin-right: auto;
     margin-top: 3px;
     border: 2px solid black;
+    font-size: 1Vw;
 }
+
+tr {
+    border-collapse: collapse;
+    background-color: papayawhip;
+    width: auto;
+}
+
 
 tr:first-of-type {
     border: 2px solid black;
     background-color: burlywood;
 }
 
-tr.dni {
-    border-collapse: collapse;
-    background-color: papayawhip;
-    width: auto;
-}
 
 tr:nth-of-type(even) {
     background-color: bisque;
@@ -119,33 +177,16 @@ td.cvicenie {
 }
 
 td.telesna-kultura {
-    /*background-color: coral;*/
     background-color: darkkhaki;
 }
 
 caption {
-    font-size: 2rem;
+    font-size: 3Vw;
     font-weight: bold;
     text-align: center;
 }
 
 /* O MNE */
-
-nav.hor {
-    text-align: center;
-    margin-right: 3%;
-    font-size: 1.3rem;
-}
-
-li.hor{
-    display: inline;
-    margin-left: 1%;
-    margin-right: 1%;
-    background: black;
-    border-radius: 20px;
-    padding-right: 1%;
-    padding-left: 1%;
-}
 
 h2.nieco-o-mne {
     background-color: bisque;
@@ -154,30 +195,19 @@ h2.nieco-o-mne {
     border-radius: 20px;
 }
 
-/*div.moja-foto {
-    float: left;
-    padding-left: 5px;
-    padding-right: 15px;
-}*/
-
 img.moja-foto{
     float: left;
     margin-left: 0.2%;
     margin-right: 1%;
-    border-radius: 20px;
+    margin-bottom: 0.5%;
 }
 
 article.text {
     font-size: 1rem;
 }
 
-/*article.o-mne {
-    float: right;
-}*/
-
 aside.citat {
     float: right;
-    /*clear: left;*/
     text-align: right;
     word-wrap: break-word;
     word-break: break-word;
@@ -185,41 +215,19 @@ aside.citat {
     padding: 0.5%;
 }
 
-i.citat {
+aside.citat i.citat {
     background: bisque;
     font-size: 1.5rem;
-    border-radius: 20px;
-
 }
 
-i.einstein{
+aside.citat i.einstein{
     font-weight: bold;
     font-size: 1.2rem;
     margin-right: 1.8%;
 }
 
-footer {
-    padding: 0.5%;
-    background: bisque;
-    border-radius: 20px;
-    grid-area: footer;
-
-}
-
 footer.main {
     clear: both;
-}
-
-
-
-.social{
-    float: right;
-    margin-right: 1%;
-    grid-area: social;
-}
-
-img.ggg{
-    border-radius: 20px;
 }
 
 li.predmety {
@@ -240,87 +248,54 @@ body.zivotopis {
 }
 
 
-div.lavy {
+.lavy {
     grid-area: lavy;
     background: goldenrod;
     padding: 3%;
-    margin-left: 45%;
+    margin-left: 35%;
     margin-right: 0;
     text-align: center;
     border-radius: 20px;
+    font-size: 1Vw;
+    word-break: break-word;
 }
 
-div.pravy {
+.pravy {
     grid-area: pravy;
     background: burlywood;
     padding: 3%;
     margin-left: 0;
-    margin-right: 45%;
+    margin-right: 35%;
     text-align: left;
     border-radius: 20px;
+    font-size: 0.8Vw;
+    word-break: break-word;
 }
 
-h2.nadpis{
-    /*background: bisque;*/
-    grid-area: nadpis;
-    text-align: center;
-    text-decoration: none;
-    font-size: 2rem;
-    padding: 0;
-    margin: 0;
+.foto-cv{
+    width: 12Vw;
 }
 
 /*OBRÁZOK*/
-
-/*div.obrazok{
-    position: relative;
-    /*background: url("../../web/drivers.jpg");
-    width: 100%;
-    height: 100vh;
-    z-index: 0;
-    /*background-repeat: no-repeat;
-    align-content: center;
-    margin: auto auto;
-}*/
-
-/*img.interaktiv {
-    position: relative;
-    border-radius: 20px;
-    float: left;
-    margin-left: 0.2%;
-    margin-right: 1%;
-}*/
-
-/*.pin:hover .inner{
-    visibility: visible;
-    opacity: 1;
-}
-
-.pin .inner{
-    background-color: white;
-    border-radius: 4px;
-    position: relative;
-    width: 15vw;
-    padding: 6px;
-    -webkit-transition: opacity 0.2s;
-    left: calc(100% + 25px);
-    z-index: 2;
-}*/
 
 body.obrazok {
     display: flex;
     flex-direction: column;
 }
 
-section.interactive {
+.foto-driver{
+    width: 10Vw
+}
+
+section.interaktiv {
     position: relative;
     float: none;
     display: block;
-    margin-right: auto;
-    margin-left: auto;
-    z-index:0;
-    /*text-align: center;*/
+    margin: auto auto;
+    z-index: 0;
+    font-size: 1Vw;
 }
+
 
 
 .marker {
@@ -331,13 +306,24 @@ section.interactive {
     height: 40px;
 }
 
-.marker .frame {
+.marker .popup {
     visibility: hidden;
     position: absolute;
 }
 
 
-.marker:hover .frame{
+.marker:hover .popup{
+    text-align: center;
+    visibility: visible;
+    border-radius: 20px;
+    background-color: bisque;
+    width: 13Vw;
+    padding-top: 1%;
+    z-index: 3;
+    transform: translateY(-25Vh) translateX(-5Vw);
+}
+
+.marker:visited .popup{
     text-align: center;
     visibility: visible;
     border-radius: 20px;
@@ -345,52 +331,52 @@ section.interactive {
     width: 400px;
     padding-top: 1%;
     z-index: 3;
-    transform: translateY(-300px) translateX(-200px);
+    transform: translateY(-25Vh) translateX(-5Vw);
 }
 
-.marker:visited .frame{
-    text-align: center;
-    visibility: visible;
-    border-radius: 20px;
-    background-color: bisque;
-    width: 400px;
-    padding-top: 1%;
-    z-index: 3;
-    transform: translateY(-300px) translateX(-200px);
+#markerHam {
+    left: 333px;
+    top: 270px;
 }
 
-#marker1 {
-    left: 430px;
+#markerVer {
+    left: 180px;
     top: 300px;
 }
 
-#marker2 {
-    left: 250px;
-    top: 330px;
+#markerRic {
+    left: 480px;
+    top: 300px;
 }
 
-#marker3 {
-    left: 610px;
-    top: 330px;
+#markerVet {
+    left: 100px;
+    top: 320px;
 }
 
-#marker4 {
-    left: 150px;
-    top: 350px;
+#markerAlo {
+    left: 565px;
+    top: 320px;
 }
 
-#marker5 {
-    left: 710px;
-    top: 350px;
+#markerLec {
+    left: 30px;
+    top: 340px;
 }
 
-#marker6 {
-    left: 50px;
-    top: 400px;
+#markerRai {
+    left: 650px;
+    top: 340px;
 }
 
-#marker7 {
-    left: 840px;
-    top: 400px;
+#markerRai:hover .popup{
+    transform: translateY(-25Vh) translateX(-11Vw);
+}
+
+#markerAlo:hover .popup{
+    transform: translateY(-25Vh) translateX(-7Vw);
+}
+#markerLec:hover .popup{
+    transform: translateY(-25Vh) translateX(-1Vw);
 }
 
