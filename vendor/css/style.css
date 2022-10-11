@@ -3,7 +3,97 @@
     src: url(../../font/Baloo-Regular.ttf);
 }
 
-/*GENERAL*/
+@media only screen and (max-width: 992px) {
+    /*VEOBECNE*/
+    header nav {
+        font-size: 2.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section article {
+        font-size: 0.7rem;
+    }
+
+    /*ZIVOTOPIS*/
+    body.zivotopis {
+        grid-template-areas:
+            'hlavny hlavny'
+            'nadpis nadpis'
+            'lavy'
+            'pravy'
+            'footer footer';
+    }
+
+    .lavy {
+        font-size: 0.7rem;
+        grid-area: lavy;
+        background: goldenrod;
+        padding: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+        border-radius: 20px;
+        word-break: break-word;
+    }
+
+    .pravy {
+        font-size: 0.7rem;
+        grid-area: pravy;
+        background: burlywood;
+        padding: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: left;
+        border-radius: 20px;
+        word-break: break-word;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+
+    /*ZIVOTOPIS*/
+
+    body.zivotopis {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            'hlavny hlavny'
+            'nadpis nadpis'
+            'lavy pravy'
+            'footer footer';
+        grid-gap: 5px;
+    }
+
+
+    .lavy {
+        grid-area: lavy;
+        background: goldenrod;
+        padding: 3%;
+        margin-left: 25%;
+        margin-right: 0;
+        text-align: center;
+        border-radius: 20px;
+        font-size: 1rem;
+        word-break: break-word;
+    }
+
+    .pravy {
+        grid-area: pravy;
+        background: burlywood;
+        padding: 3%;
+        margin-left: 0;
+        margin-right: 25%;
+        text-align: left;
+        border-radius: 20px;
+        font-size: 1Vw;
+        word-break: break-word;
+    }
+}
+
+/*VSEOBECNE*/
 header {
     background: bisque;
     margin-top: 0;
@@ -18,6 +108,8 @@ header {
 body {
     font-family: Baloo, sans-serif;
     background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
 }
 
 ul {
@@ -35,7 +127,7 @@ nav {
     font-size: 1.3rem;
 }
 
-nav li{
+nav li {
     display: inline;
     margin-left: 1%;
     margin-right: 1%;
@@ -45,7 +137,7 @@ nav li{
     padding-left: 1%;
 }
 
-.nadpis{
+.nadpis {
     grid-area: nadpis;
     text-align: center;
     text-decoration: none;
@@ -61,59 +153,11 @@ footer {
     grid-area: footer;
 }
 
-a:link {
-    color: bisque;
-}
-
-a:visited {
-    color: antiquewhite;
-}
-
-a:hover {
-    color: mediumvioletred;
-}
-
-a:active {
-    color: red;
-}
-
-a.mailto:visited{
-    color: black;
-}
-
-a.mailto:active{
-    color: red;
-}
-
-a.mailto:link{
-    color: black;
-}
-
-a.mailto:hover{
-    color: mediumvioletred;
-}
-
-a.link:link {
-    color: black;
-}
-
-a.link:visited {
-    color: black;
-}
-
-a.link:hover {
-    color: mediumvioletred;
-}
-
-a.link:active {
-    color: red;
-}
-
 img {
     border-radius: 20px;
 }
 
-.socials{
+.socials {
     float: right;
     margin-right: 1%;
     grid-area: social;
@@ -133,7 +177,6 @@ table.rozvrh {
 }
 
 table.legenda {
-    position: center;
     width: 20%;
     margin-left: 6%;
     margin-right: auto;
@@ -148,17 +191,14 @@ tr {
     width: auto;
 }
 
-
 tr:first-of-type {
     border: 2px solid black;
     background-color: burlywood;
 }
 
-
 tr:nth-of-type(even) {
     background-color: bisque;
 }
-
 
 th, td {
     border: 1px solid black;
@@ -180,30 +220,27 @@ td.telesna-kultura {
     background-color: darkkhaki;
 }
 
-caption {
-    font-size: 3Vw;
-    font-weight: bold;
-    text-align: center;
-}
-
 /* O MNE */
 
-h2.nieco-o-mne {
+.nieco-o-mne {
     background-color: bisque;
     padding-top: 1px;
     padding-bottom: 1px;
     border-radius: 20px;
+    margin-block-start: 0;
 }
 
-img.moja-foto{
+img.moja-foto {
     float: left;
     margin-left: 0.2%;
     margin-right: 1%;
     margin-bottom: 0.5%;
 }
 
-article.text {
-    font-size: 1rem;
+.clanok {
+    margin-right: 1.2%;
+    margin-left: 1.2%;
+    margin-top: 0.2%;
 }
 
 aside.citat {
@@ -215,15 +252,18 @@ aside.citat {
     padding: 0.5%;
 }
 
-aside.citat i.citat {
+aside.citat q.citat {
     background: bisque;
     font-size: 1.5rem;
+    font-style: italic;
 }
 
-aside.citat i.einstein{
+aside.citat .einstein {
     font-weight: bold;
     font-size: 1.2rem;
+    font-style: italic;
     margin-right: 1.8%;
+    padding: 0;
 }
 
 footer.main {
@@ -236,55 +276,18 @@ li.predmety {
 
 /* ZIVOTOPIS */
 
-body.zivotopis {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas:
-            'hlavny hlavny'
-            'nadpis nadpis'
-            'lavy pravy'
-            'footer footer';
-    grid-gap: 5px;
-}
-
-
-.lavy {
-    grid-area: lavy;
-    background: goldenrod;
-    padding: 3%;
-    margin-left: 35%;
-    margin-right: 0;
-    text-align: center;
-    border-radius: 20px;
-    font-size: 1Vw;
-    word-break: break-word;
-}
-
-.pravy {
-    grid-area: pravy;
-    background: burlywood;
-    padding: 3%;
-    margin-left: 0;
-    margin-right: 35%;
-    text-align: left;
-    border-radius: 20px;
-    font-size: 0.8Vw;
-    word-break: break-word;
-}
-
-.foto-cv{
+.foto-cv {
     width: 12Vw;
 }
 
 /*OBRÁZOK*/
 
-body.obrazok {
-    display: flex;
-    flex-direction: column;
+.foto-driver {
+    width: 10Vw
 }
 
-.foto-driver{
-    width: 10Vw
+.inter-foto {
+    width: 65Vw;
 }
 
 section.interaktiv {
@@ -296,87 +299,123 @@ section.interaktiv {
     font-size: 1Vw;
 }
 
-
-
 .marker {
     position: absolute;
-    background: white;
+    background: antiquewhite;
     border-radius: 20px;
-    width: 40px;
-    height: 40px;
+    width: 2.5Vw;
+    height: 2.5Vw;
 }
 
 .marker .popup {
     visibility: hidden;
     position: absolute;
+    height: 8px;
+    opacity: 0.3;
+    transition: opacity 0.6s linear;
 }
 
 
-.marker:hover .popup{
+.marker:hover .popup {
     text-align: center;
     visibility: visible;
     border-radius: 20px;
     background-color: bisque;
     width: 13Vw;
+    height: 24Vw;
     padding-top: 1%;
     z-index: 3;
-    transform: translateY(-25Vh) translateX(-5Vw);
-}
-
-.marker:visited .popup{
-    text-align: center;
-    visibility: visible;
-    border-radius: 20px;
-    background-color: bisque;
-    width: 400px;
-    padding-top: 1%;
-    z-index: 3;
-    transform: translateY(-25Vh) translateX(-5Vw);
+    transform: translateY(-14Vw) translateX(-5Vw);
+    opacity: 0.9;
 }
 
 #markerHam {
-    left: 333px;
-    top: 270px;
+    left: 31.5Vw;
+    top: 65%;
 }
 
 #markerVer {
-    left: 180px;
-    top: 300px;
+    left: 18Vw;
+    top: 70%;
 }
 
 #markerRic {
-    left: 480px;
-    top: 300px;
+    left: 45Vw;
+    top: 70%;
 }
 
 #markerVet {
-    left: 100px;
-    top: 320px;
+    left: 10Vw;
+    top: 75%;
 }
 
 #markerAlo {
-    left: 565px;
-    top: 320px;
+    left: 52.5Vw;
+    top: 75%;
 }
 
 #markerLec {
-    left: 30px;
-    top: 340px;
+    left: 3Vw;
+    top: 80%;
 }
 
 #markerRai {
-    left: 650px;
-    top: 340px;
+    left: 60Vw;
+    top: 80%;
 }
 
-#markerRai:hover .popup{
-    transform: translateY(-25Vh) translateX(-11Vw);
+#markerRai:hover .popup {
+    transform: translateY(-14Vw) translateX(-9Vw);
 }
 
-#markerAlo:hover .popup{
-    transform: translateY(-25Vh) translateX(-7Vw);
-}
-#markerLec:hover .popup{
-    transform: translateY(-25Vh) translateX(-1Vw);
+#markerLec:hover .popup {
+    transform: translateY(-14Vw) translateX(-1Vw);
 }
 
+a:link {
+    color: bisque;
+}
+
+a:visited {
+    color: antiquewhite;
+}
+
+a:hover {
+    color: mediumvioletred;
+}
+
+a:active {
+    color: red;
+}
+
+a.mailto:visited {
+    color: black;
+}
+
+a.mailto:active {
+    color: red;
+}
+
+a.mailto:link {
+    color: black;
+}
+
+a.mailto:hover {
+    color: mediumvioletred;
+}
+
+a.link:link {
+    color: black;
+}
+
+a.link:visited {
+    color: black;
+}
+
+a.link:hover {
+    color: mediumvioletred;
+}
+
+a.link:active {
+    color: red;
+}
