@@ -13,8 +13,12 @@
         font-size: 2rem;
     }
 
-    section article {
-        font-size: 0.7rem;
+    article {
+        font-size: 0.75rem;
+    }
+
+    article h2,h3{
+        font-size: 1rem;
     }
 
     /*ZIVOTOPIS*/
@@ -28,7 +32,7 @@
     }
 
     .lavy {
-        font-size: 0.7rem;
+        font-size: 1rem;
         grid-area: lavy;
         background: goldenrod;
         padding: 3%;
@@ -37,6 +41,7 @@
         text-align: center;
         border-radius: 20px;
         word-break: break-word;
+        font-weight: bold;
     }
 
     .pravy {
@@ -76,8 +81,9 @@
         margin-right: 0;
         text-align: center;
         border-radius: 20px;
-        font-size: 1rem;
+        font-size: 1.3rem;
         word-break: break-word;
+        font-weight: bold;
     }
 
     .pravy {
@@ -322,7 +328,7 @@ section.interaktiv {
     border-radius: 20px;
     background-color: bisque;
     width: 13Vw;
-    height: 24Vw;
+    height: auto;
     padding-top: 1%;
     z-index: 3;
     transform: translateY(-14Vw) translateX(-5Vw);
